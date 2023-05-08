@@ -1,0 +1,830 @@
+/* Importing google fonts for using in main header and in tooltips */
+/* Merienda font for the website title */
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@407&display=swap");
+
+/* Alegreya Sans font for tooltips*/
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap");
+
+/* Global CSS variables */
+/* I had to introduce this variable to be able to change  transform property of @keyframes for mirrored tooltips (if they are going off the bottom of the screen) */
+:root {
+  --keyframes: -20px;
+}
+
+/*
+  ========================================
+  General rules
+  ========================================
+*/
+
+/* Website body style */
+body {
+  background-color: rgb(255, 255, 255);
+  /*  
+  To prevent mobile browsers (like Safari for iOS, Chrome for Android, Mobile Firefox and IE Mobile) increases the font size of wide blocks so when I choose desktop mode in chrome my website looks exactly the same like in browser. 
+Otherwise it looked too ugly and disproportional
+  */
+  -webkit-text-size-adjust: 100%;
+  /*  To delete white spaces on the sides of webpage */
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Rule for the main content of a document to compensate the width of fixed topbar */
+main {
+  margin-top: 60px;
+}
+
+/* Website title style */
+h1 {
+  font-family: "Merienda", sans-serif;
+  font-size: 450%;
+  color: steelBlue;
+  margin: 0;
+}
+
+h1 p {
+  /* Here I decided to override default values of browser "user agent" for paragraph tag to place the header exactly where I wanted it to be */
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-align: center;
+}
+
+/* Names of website sections */
+h2 {
+  color: steelBlue;
+  text-align: center;
+  width: 100%;
+  word-spacing: 0.2rem;
+}
+
+blockquote p,
+.text p,
+.asana p,
+footer {
+  font-size: 1rem;
+  /* increase line spacing almost everywhere to make text easier to read */
+  line-height: 1.6rem;
+}
+
+.asana h3 {
+  font-size: 1.2rem;
+}
+/* Change of the default blue color of links */
+a {
+  color: black;
+}
+
+/* Change color of visited links */
+a:visited {
+  color: grey;
+}
+/* Change color when hover over links */
+a:hover {
+  color: #0a74ce;
+}
+
+/* 
+Change default red color when the link is being clicked.
+Had to put this rule to the bottom to prevent overriding by colors of other rules for pseudo-classes 
+*/
+a:active {
+  color: #b417d0;
+}
+
+/* I deliberately used and flex-containers and grid-containers to show that I know how to use both, also I deliberately didn't align all sections on the page - I wanted site to look more unusual */
+
+/* Flex-conteiner for general purposes */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*   
+  Property, that I often turned on to identify borders of elements on my page -
+  border: 2px dashed rgb(0, 255, 65); 
+ */
+}
+
+/* Grid-conteiner for general purposes */
+.grid-container {
+  display: grid;
+  gap: 1rem;
+  /* border: 2px dashed rgb(0, 255, 65); */
+}
+/* Style that I use only for semantic purposes. Only screen readers are able to see headers with this style */
+.sr-only {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+/* Style by default for images */
+img {
+  max-width: 100%;
+}
+
+/*
+  ========================================
+  Top bar
+  ========================================
+*/
+
+/* Style for the topbar */
+#topbar {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #172b3c;
+  margin-bottom: 20px;
+  color: white;
+  /*  To make this bar fixed so it would be always on the top of the screen */
+  position: fixed;
+  min-width: 350px;
+  width: 100%;
+  top: 0;
+  /* To be shure that it will be placed over any other elements */
+  z-index: 100;
+  /* To make text in the navbar look different */
+  letter-spacing: 0.6px;
+  height: 50px;
+}
+
+/*
+  ========================================
+  Social Icons
+  ========================================
+*/
+
+/* 
+I used social icons from website fontawesome.com. I registered there to get my free kit of icons for free. Link - in the script at the bottom of the body tag
+*/
+/* It took a bit of work though to get them to look good */
+/* Icon container style */
+.social-icons {
+  display: grid;
+  margin: 0.5rem;
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Change the color of icons */
+.social-icons a {
+  color: white;
+}
+
+/* Assign a hover color similar to the color when hovering over links in navigation menu */
+.social-icons a:hover {
+  color: #74a9d7;
+}
+
+/*
+  ========================================
+  Navigation desktop menu
+  ========================================
+*/
+
+#navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #172b3c;
+}
+
+#navigation li {
+  float: left;
+}
+
+/* Style the links inside the navigation bar */
+#navigation li a {
+  display: block;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+/* For not to hide headings under the topbar after scrolling the page by clicking on the navigation links */
+.anchored {
+  position: relative;
+  top: -60px;
+}
+
+/* Color for dinamically added active class of links in navigation menu */
+#navigation .active {
+  background-color: #0a74aa;
+}
+
+/*
+  ========================================
+  Hamburger menu for small screens
+  ========================================
+*/
+
+/* Hide links that are controlled by clicking on the hamburger menu for small screens */
+#navigation #icon {
+  display: none;
+  font-size: 2rem;
+  padding: 6.5px 16px;
+  color: white;
+}
+
+/*
+  ========================================
+  Home section
+  ========================================
+*/
+
+/* Styling for the homepage columns */
+.homepage-column {
+  flex-flow: column;
+}
+
+/* Styling for blockquote */
+blockquote {
+  margin: 0;
+  max-width: 400px;
+}
+/* Styling for paragraphs within blockquote */
+blockquote p {
+  padding: 15px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+/* Styling for citation text */
+cite {
+  font-style: normal;
+}
+
+/* Styling for the homepage section */
+#homepage {
+  flex-wrap: wrap;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+/* Styling for the image of homepage */
+#main-img {
+  max-width: 450px;
+  filter: grayscale(20%);
+  width: 100%;
+  /*   to prevent image from stretching */
+  align-self: center;
+}
+
+/*
+  ========================================
+  History of asanas section
+  ========================================
+*/
+
+/* Define a two-column grid with variable column width */
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0 2.5em;
+  text-align: left;
+}
+
+/* Styling for figure element */
+figure {
+  width: 100%;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+/* Styling for image inside a figure (images inside articles) */
+figure img {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Style the captions of images */
+#id-about-asanas figcaption {
+  display: flex;
+  font-size: smaller;
+  background-color: rgb(0 0 0 / 15%);
+  padding: 0.5em;
+  border: 0.1em groove gray;
+}
+
+/* Defines the pink color and padding of a section with articles */
+.pink {
+  background-color: #fcc2d6bb;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+/* Limit the maximum width of section about asanas */
+#id-about-asanas {
+  max-width: 1050px;
+}
+
+.about {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  /*   border: 2px dashed rgb(0, 255, 65); */
+}
+
+/* Style the hint span with color, text-decoration, and position */
+span.hint {
+  color: #a1138e;
+  text-decoration: none;
+  font-weight: bold;
+  /* I use this property to be able later to use absolute positioning for tooltip */
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set the cursor to pointer when hovering over a hint span */
+.hint:hover {
+  cursor: pointer;
+}
+
+/* Style for tooltips which dinamically pop-up when hover or click over span .hint */
+.hint-tooltip {
+  box-sizing: border-box;
+  /*   To make tooltips on top of any other texts */
+  z-index: 1;
+  width: 20rem;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.1em;
+  /* Visualise content of custom data-tooltip attribute of hint span */
+  content: attr(data-tooltip);
+  color: black;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.2em;
+  padding: 0.4em 0.2em 0.4em 0.6em;
+  background-color: white;
+  /* I tried to make shadow of tooltip looks like in Wikipedia. For that I had to find out how to stop Developer Tools inspector to move it to "Paused in debugger" state so I could copy the value of shadow property of wikipedia tooltips. After getting it I changed effect a little to make it stronger */
+  box-shadow: 0px 20px 17px 0px rgb(0 0 0 / 18%),
+    0px 0px 5px 12px rgb(0 0 0 / 0%);
+  border-radius: 0.5em;
+  /*   I also copied animation effect of tooltips from wikipedia */
+  animation: fade 0.2s ease forwards;
+}
+
+/* starting and ending point of animated transitions for tooptips (copied from Wikipedia) */
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translate(0, var(--keyframes));
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* Set flex display and maximum width for item container  */
+.item {
+  display: flex;
+  max-width: 650px;
+  text-align: justify;
+  padding: 18px 12px;
+  /*   border: 2px dashed rgb(0,255,65); */
+}
+
+/* Style the heading within item container */
+.item h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  width: 250px;
+  color: steelBlue;
+}
+
+/* Style the theme section (with title of article) of the item */
+.theme {
+  background-color: white;
+  border-radius: 1em 0 0 1em;
+}
+
+/* Style the text section of the item (with text of article) */
+.text {
+  background-color: #cfe8c9;
+  border-radius: 0 1em 1em 0;
+  padding: 0 30px;
+  border-left: 10px solid #4682b4;
+  /*   border: 2px dashed rgb(0, 255, 65); */
+}
+
+/*
+  ========================================
+  12 basic asanas section
+  ========================================
+*/
+
+/* Grid container for basic asanas section, with columns that adjust automatically */
+.grid-container.class-basic-asanas {
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+}
+
+/* Container for basic asanas section */
+#id-basic-asanas {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1200px;
+}
+
+/* Individual asana container */
+.asana {
+  padding: 20px;
+  background-color: lightBlue;
+  border-radius: 1rem;
+}
+
+/* Style images for asanas */
+.asana img {
+  margin-right: 1.2rem;
+  margin-bottom: 0.1rem;
+  padding-top: 0.4rem;
+  float: left;
+  width: 100px;
+}
+
+/*
+  ========================================
+  Video section
+  ========================================
+*/
+
+/* Container for video section */
+.youtube-video {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+}
+
+/* Individual video container */
+.video {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  padding-top: 56.25%;
+}
+
+/* Style the video to fit in the container with full height and width */
+#player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+  ========================================
+  Footer section
+  ========================================
+*/
+
+/* Style the main footer section */
+#main-footer {
+  display: block;
+  background-color: #d1cedb;
+  padding-top: 20px;
+  text-align: center;
+  /* Add padding to the bottom to create space between the content and the bottom of the screen */
+  padding-bottom: 4rem;
+}
+
+/* Style the form */
+form {
+  /* Use flexbox to arrange form elements in a column */
+  display: flex;
+  flex-direction: column;
+  /* Limit the width of the form to 20rem */
+  max-width: 20rem;
+  /* Center the form within its parent element */
+  margin: 0 auto;
+}
+
+/* Style the label */
+label {
+  /* Add some space between the label and the input field */
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+}
+
+/* Style the input field */
+input {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.4s ease;
+}
+
+/* Style the submit button when hovering over it */
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Add a box shadow to the input field when it is selected */
+input:focus {
+  box-shadow: 0 0 8px #4caf50;
+}
+
+/*
+  ========================================
+  LIGHTBOX
+  ========================================
+*/
+
+/* Styles for the Lightbox container */
+#lightbox {
+  /* Initially hidden */
+  display: none;
+}
+/* Styles for the active Lightbox container */
+#lightbox.lb-active {
+  /*  Display as grid when active */
+  display: grid;
+  grid-template-areas:
+    "main main main"
+    "main main main"
+    "main main main"
+    "cap cap cap"
+    "one two three"
+    "tb1 tb2 tb3";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) 50px 100px 40px;
+  gap: 0.1rem;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* dark background with opacity of 0.9 */
+  background-color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+}
+
+/* Styles for the main image in the Lightbox */
+#lightbox-img {
+  display: grid;
+  grid-area: main;
+  justify-self: center;
+  align-self: center;
+  max-height: 100%;
+}
+
+/* Styles for the caption in the Lightbox */
+#lb-caption {
+  grid-area: cap;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Styles for the thumbnail captions in the Lightbox */
+.tb-caption p {
+  display: grid;
+  padding-top: 5px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+#tb-1 {
+  grid-area: tb1;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#tb-2 {
+  grid-area: tb2;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#tb-3 {
+  grid-area: tb3;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Styles for the thumbnails in the Lightbox */
+#img-1 {
+  grid-area: one;
+  max-height: 100px;
+  justify-self: center;
+  align-self: center;
+  padding-bottom: 5px;
+}
+#img-2 {
+  grid-area: two;
+  max-height: 100px;
+  justify-self: center;
+  align-self: center;
+  padding-bottom: 5px;
+}
+#img-3 {
+  grid-area: three;
+  max-height: 100px;
+  justify-self: center;
+  align-self: center;
+  padding-bottom: 5px;
+}
+
+/* Styles for the close button and arrow buttons in the Lightbox */
+#lightbox-close,
+#lightbox-arrow-left,
+#lightbox-arrow-right {
+  position: absolute;
+  color: white;
+  font-size: 2em;
+  padding: 0.1em 0.5em;
+  margin-right: 0;
+  background: #6666664a;
+}
+
+/* Styles for the close button in the Lightbox */
+#lightbox-close {
+  top: 0;
+  right: 0px;
+}
+
+/* Styles for the arrow buttons in the Lightbox */
+#lightbox-arrow-left {
+  top: 20vh;
+  left: 0px;
+  margin-left: 0;
+}
+
+#lightbox-arrow-right {
+  top: 20vh;
+  right: 0;
+  margin-right: 0;
+}
+/* Change color and cursor of the close and arrow buttons, when it is hovered or focused, giving visual feedback to the user */
+#lightbox-close:hover,
+#lightbox-close:focus,
+#lightbox-arrow-left:hover,
+#lightbox-arrow-right:hover {
+  color: #999;
+  cursor: pointer;
+}
+
+.thumbnails:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/*
+  ========================================
+  Media queries
+  ========================================
+*/
+/* When the screen is less than 1056 pixels wide */
+@media (max-width: 1056px) {
+  /* Reset margin for about section */
+  .about {
+    margin-left: 0;
+    margin-right: 0;
+    /*   border: 2px dashed rgb(0, 255, 65); */
+  }
+  /* Allow items to expand to 100% of container width */
+  .item {
+    max-width: 100%;
+  }
+
+  /* Different style for titles of articles */
+  .theme {
+    width: 100%;
+    border-radius: 1em 1em 0 0;
+    justify-content: center;
+  }
+
+  /* Adjust text section border radius */
+  .text {
+    border-radius: 0 0 1em 1em;
+  }
+}
+
+/* When the screen is less than 900 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 900px) {
+  /* Hide all links in the navigation, except for the first one */
+  #navigation li:not(:first-child) a {
+    display: none;
+  }
+  /* Display the "hamburger" icon for opening and closing the navigation */
+  #navigation #icon {
+    display: block;
+  }
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+  #homepage.responsive {
+    /* Add padding to the top of the homepage to account for the fixed top bar */
+    padding-top: 300px;
+  }
+
+  /* Adjust top bar height and alignment */
+  #topbar.responsive {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /*   
+  For navigation not to hide headings
+  Adjust positioning of anchored elements 
+  */
+  .anchored.responsive {
+    position: relative;
+    top: -320px;
+  }
+
+  /* Display the navigation links vertically */
+  #navigation.container.responsive {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6px;
+  }
+  /* Remove floating from navigation links */
+  #navigation.responsive li {
+    float: none;
+  }
+  /* Position the "hamburger" icon in the top right corner */
+  #navigation.responsive #icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  /* Display navigation links as block elements */
+  #navigation.responsive li a {
+    /*     float: none; */
+    display: block;
+    /*     text-align: left; */
+  }
+
+  /* Styling for hint tooltips */
+  .hint-tooltip {
+    width: 10rem;
+    font-weight: 200;
+    font-size: 1em;
+    background-color: #eee;
+    line-height: 1em;
+  }
+}
+
+/* 
+Later on my smartphone I noticed that my nav links in "hamburger" menu list sometimes "sticks" to active state and I had no idea why, so I had to connect my phone to the laptop and use inspection dev tool for browser on my smartphone. This way I found out that the problem is with the hover rule - it was working not like expected, so I googled the solution and found the next one - media query only for devices that supports hovering. 
+
+Explanation - if the browser supports proper/true/real/non-emulated hovering (e.g. has a mouse-like primary input device), then apply this style when buttons are hovered over.
+After adding this rule evetything started to work as I wanted  
+*/
+@media (hover: hover) {
+  #navigation li a:hover {
+    background-color: steelBlue;
+    transition: 0.4s;
+  }
+}
