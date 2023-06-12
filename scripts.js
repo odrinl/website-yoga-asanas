@@ -142,9 +142,10 @@ thumbnail_imgs.forEach((tb, ind) => {
 
 // Get close button and add click event listener to remove active class from lightbox
 const close_button = document.getElementById("lightbox-close");
-close_button.addEventListener("click", function () {
+if (close_button) {close_button.addEventListener("click", function () {
   lightbox.classList.remove("lb-active");
 });
+}
 
 // Set initial index to 0 for image navigation
 let current_index = 0;
