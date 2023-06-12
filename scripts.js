@@ -3,7 +3,10 @@ NAVIGATION
 */
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the "burger" icon */
+if (document.getElementById("icon")){
 const icon_link = document.getElementById("icon");
+}
+
 const nav_res = document.getElementById("navigation");
 const topbar_res = document.getElementById("topbar");
 
