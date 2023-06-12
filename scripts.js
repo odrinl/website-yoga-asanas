@@ -95,7 +95,7 @@ function videoAutoControl(selector, video, videoTogglePct) {
 
     document.addEventListener("DOMContentLoaded", function() {
 
-        /*
+      /*
       NAVIGATION
       */
 
@@ -119,6 +119,23 @@ function videoAutoControl(selector, video, videoTogglePct) {
           homepage_res.classList.toggle("responsive");
         });
       }
+
+      // Add event listener to detect clicks outside of topbar_res for closing burger menu
+      document.addEventListener("click", function(event) {
+        const target = event.target;
+        const isInsideTopbar = topbar_res.contains(target);
+        
+        if (!isInsideTopbar && topbar_res.classList.contains("responsive")) {
+          const anchor_res = document.getElementsByClassName("anchored");
+          for (const anchor of anchor_res) {
+            anchor.classList.remove("responsive");
+          }
+          nav_res.classList.remove("responsive");
+          topbar_res.classList.remove("responsive");
+          homepage_res.classList.remove("responsive");
+        }
+      });
+
       // Make the clicked link in the navigation menu active - change background color and also make it active while scrolling
 
       // Select all navigation links
