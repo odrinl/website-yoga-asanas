@@ -3,18 +3,15 @@ NAVIGATION
 */
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the "burger" icon */
-const_icon_link;
-if (document.getElementById("icon")){
-icon_link = document.getElementById("icon");
-}
+
 
 const nav_res = document.getElementById("navigation");
 const topbar_res = document.getElementById("topbar");
 
 const homepage_res = document.getElementById("homepage");
+const icon_link = document.getElementById("icon");
 
-if (icon_link) {
-icon_link.addEventListener("click", function () {
+if (icon_link) {icon_link.addEventListener("click", function () {
   const anchor_res = document.getElementsByClassName("anchored");
   for (const anchor of anchor_res) {
     anchor.classList.toggle("responsive");
