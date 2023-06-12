@@ -6,317 +6,765 @@
     <title>Yoga asanas</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="scripts.js"></script> 
+    <script src="scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    </head>
-    <body>
+  </head>
+  <body>
+    <header>
+      <!-- TOPBAR -->
 
-<header>
-
-  <!-- TOPBAR -->
-
-  <div id="topbar" class="container">
-
-    <!-- Social icons -->
-    <div class="social-icons">
-      <!-- Instagram icon -->
-      <a id="insta" href="https://www.instagram.com/odrinl/" target="_blank">
-        <i class="fab fa-instagram"></i>
-      </a><!-- .insta -->
-      <!-- Facebook icon-->
-      <a id="facebook" href="https://www.facebook.com/odrinl" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-      </a><!-- .facebook -->
-      <!-- Linkedin icon -->
-      <a id="linkedin" href="https://www.linkedin.com/in/odrinl/" target="_blank">
-        <i class="fab fa-linkedin-in"></i>
-      </a><!-- .linkedin -->
-      <!-- Youtube icon -->
-      <a id="youtube" href="https://youtu.be/sgPt3-IJN6g" target="_blank">
-        <i class="fab fa-youtube"></i>
-      </a><!-- .youtube -->
-    </div><!-- .social-icons -->
-
-    <!-- NAVIGATION -->
-    <nav id="navigation" class="container">
-      <!-- Navigation section header, visible only for screen reders -->
-      <h4 class="sr-only">NAVIGATION</h4>
-      <!-- List of navigation links -->
-      <ul>
-        <!-- Class "active" at first is assigned to the home link and then dynamically reassigned to the current link when clicking or scrolling -->
-        <li><a class="active" href="#home">HOME</a></li>
-        <li><a href="#about-asanas">ABOUT ASANAS</a></li>
-        <li><a href="#basic-asanas">12 BASIC ASANAS</a></li>
-        <li><a href="#video">VIDEO</a></li>
-        <li><a href="#footer">SUBSCRIBE</a></li>
-        <!-- Hamburger button. Visible only for small screens -->
-        <li><a id="icon">
-            <i class="fa fa-bars"></i>
-          </a></li><!-- #icon -->
-      </ul>
-    </nav><!-- #navigation.container -->
-
-  </div><!-- #topbar.container -->
-
-</header>
-
-<main><a name="home" class="anchored"></a>
-
-  <!-- HOME PAGE -->
-  <div id="homepage" class="container">
-    <div class="container homepage-column">
-      <div class="title">
-        <h1>
-          <p>YOGA</p>
-          <p>ASANAS</p>
-        </h1>
-      </div><!-- .title -->
-      <!-- Header only for screen readers to increase website accessibility -->
-      <h2 class="sr-only">HOME PAGE</h2>
-      <!-- Section that has quote from Wikipedia -->
-      <figure>
-        <blockquote cite="https://en.wikipedia.org/wiki/Asana">
-          <p><strong>An asana is a body posture</strong>, used in both medieval <em>hatha</em> yoga and modern yoga. The term is derived from the Sanskrit word for <em>'seat'</em>.</p>
-        </blockquote>
-        <figcaption><cite><a href="https://en.wikipedia.org/wiki/Asana">(c) Wikipedia</a></cite></figcaption>
-      </figure>
-    </div><!-- .column -->
-
-    <!-- Header image of the website -->
-    <img id="main-img" src="https://raw.githubusercontent.com/gaechkahub/images/main/yoga.jpg" alt="Asana icon picture">
-  </div><!-- .container -->
-
-  <!-- Section with articles about yoga asanas -->
-  <section class="class-about-asanas container pink"><a name="about-asanas" class="anchored"></a>
-    <!-- Header of about asanas section -->
-    <h2>ABOUT ASANAS</h2>
-    <div id="id-about-asanas" class="container">
-      <!-- Article about history of asanas -->
-      <article class="container about">
-        <div class="item theme">
-          <!-- Header of first article -->
-          <h3>The history of asanas</h3>
-        </div><!-- .item.theme -->
-        <!-- Text of first article -->
-        <div class="item text">
-          <div>
-            <p>The distinction between <em>Hatha yoga</em> and <em>asana</em> is that <strong>asana</strong> specifically refers to the physical postures practiced in yoga, while <strong>Hatha yoga</strong> is a branch of yoga that that incorporates asanas among its many practices. The practice of asanas is believed to have originated in ancient India and can be traced back to the <span class="hint" data-tooltip="an ancient Indian collection of Vedic Sanskrit hymns. It is one of the four sacred canonical Hindu texts known as the Vedas.">Rigveda</span>, an ancient Hindu scripture dating back to around 1500 BCE.</p>
-
-            <p><span class="hint" data-tooltip="also called Gonardiya or Gonikaputra, a Hindu author, mystic and philosopher">Patanjali</span> in his <span class="hint" data-tooltip="a collection of Sanskrit sutras (aphorisms) on the theory and practice of yoga">Yoga Sutras</span>, written around 400 CE, describes asana practice as the third of the eight limbs (Sanskrit: अष्टाङ्ग, aṣṭāṅga, from अष्ट् aṣṭ, eight, and अङ्ग aṅga, limb) of classical, or raja yoga. While the Yoga Sutras do not mention any asanas by name, they provide guidelines for the physical practice of asanas, emphasizing their role in purifying the body and preparing it for meditation.</p>
-
-            <figure>
-              <img class="for-lightbox" src="https://github.com/gaechkahub/images/raw/main/patanjali_text.jpg" alt="A page from Patanjali's Yoga Sutras">
-              <figcaption class="lb-caption">A page from Patanjali's Yoga Sutras and Bhasya commentary (c. 2nd to 4th century CE), which placed asana as one of the eight limbs of classical yoga</figcaption>
-            </figure>
-
-            <p>The <span class="hint" data-tooltip="an early text on Hatha yoga, attributed to the sage Goraksha">Goraksha Shataka</span>, written in the 13th century, and the <span class="hint" data-tooltip="Sanskrit manual on hatha yoga, written by Svatmarama, Indian yogic sage">Hatha Yoga Pradipika</span> (Light on Hatha Yoga), written in the 15th century, identify 84 asanas. The <span class="hint" data-tooltip="late medieval hatha yoga text, originally written by Srinivasa Bhatta yogi">Hatha Ratnavali</span>, written in the 17th century, provides a different list of 84 asanas, describing some of them in greater detail. These ancient texts provide valuable insights into the history and evolution of asanas in yoga.</p>
-            <div class="two-column">
-              <figure>
-                <img class="for-lightbox" src="https://github.com/gaechkahub/images/raw/main/Sannyasi_in_yoga_meditation_on_the_Ganges%2C_Rishikesh.jpg" alt="Sanyassin meditating in Padmasana">
-                <figcaption class="lb-caption">Sanyassin meditating in Padmasana beside the River Ganges at Rishikesh</figcaption>
-              </figure>
-
-              <p>During the 20th century, <span class="hint" data-tooltip="an instance of territorial nationalism, included all the people of India, was spearheaded by Mahatma Gandhi and Jawaharlal Nehru">Indian nationalism</span> responded to <span class="hint" data-tooltip="From 1858 onwards, the British government directly ruled India, it became known as the British Raj">colonialism</span> by promoting physical culture. This movement led to the emergence of pioneers such as <span class="hint" data-tooltip="an Indian yoga guru and founder of the Yoga Institute in Mumbai">Yogendra</span>, <span class="hint" data-tooltip="an Indian yoga teacher and researcher, founded the Kaivalyadhama Yoga Institute">Kuvalayananda</span>, and <span class="hint" data-tooltip='(1888-1989) was a renowned Indian yoga teacher often referred to as the "father of modern yoga"'>Krishnamacharya</span>, who introduced a new system of asanas that combined exercise and traditional Hatha yoga. Krishnamacharya's influential pupils including <span class="hint" data-tooltip="an Indian yoga teacher, founded the Ashtanga Yoga Research Institute in Mysore">Pattabhi Jois</span>, the founder of <span class="hint" data-tooltip="unique style of yoga that emphasizes breath-synchronized movement and a set series of postures">Ashtanga vinyasa yoga</span>, and <span class="hint" data-tooltip="a renowned yoga teacher and popularizer of yoga">B.K.S. Iyengar</span>, the founder of <span class="hint" data-tooltip="emphasizes precise alignment and the use of props, such as blocks and straps, to help students">Iyengar yoga</span>, developed hundreds of additional asanas and revived the popularity of yoga, introducing it to the Western world.</p>
-            </div><!-- .two-column -->
-
-            <p>Iyengar's 1966 book, <span class="hint" data-tooltip="This book has been translated into 18 languages and has sold over 3 million copies">Light on Yoga</span> introduced approximately 200 asanas, accompanied by detailed instructions and photographs. This book has since become a classic reference for practitioners and teachers of yoga worldwide. <span class="hint" data-tooltip="founder of the Dharma Yoga Center in New York City">Dharma Mittra</span>, another prominent yoga teacher, has also illustrated hundreds more asanas in his book, Asanas: 608 Yoga Poses.</p>
-
-            <figure>
-              <img class="for-lightbox" src="https://github.com/gaechkahub/images/raw/main/Growth_in_Number_of_Asanas.png" alt="Growth in Number of Asanas">
-              <figcaption class="lb-caption">GS=Goraksha Sataka; ShS=Shiva Samhita; HYP=Hatha Yoga Pradipika; HR=Hatha Ratnavali; GhS=Gheranda Samhita; JP=Joga Pradipika; YS=Yoga Sopana; LoY=Light on Yoga; DM=Dharma Mittra</figcaption>
-            </figure>
-
-            <p>Asanas have been depicted in Indian religious art for centuries, often portraying figures of <span class="hint" data-tooltip="a spiritual leader and teacher who founded Buddhism">Buddha</span>, <span class="hint" data-tooltip="There are 24 recognized tirthankaras - revered figures in Jainism">Jain tirthankaras</span>, and <span class="hint" data-tooltip="a major deity in Hinduism and one of the Trimurti, the three main gods of Hinduism">Shiva</span> in <span class="hint" data-tooltip=" a cross-legged sitting posture, where the feet are placed on the opposite thighs, with the soles facing upward">lotus position</span> or other meditation seats.</p>
-
-            <p>The evolution of asanas in yoga has been ongoing for thousands of years. Today, with the growth of popularity of yoga worldwide, asanas continue to be an integral part of modern yoga practice and are widely recognized for their numerous health benefits.</p>
-
-          </div>
-        </div><!-- .item.text -->
-      </article><!-- .container.about -->
-
-      <!-- Article about benefits of asanas -->
-      <article class="container about">
-        <div class="item theme">
-          <!-- Header of second article -->
-          <h3>Benefits of asanas</h3>
+      <div id="topbar" class="container">
+        <!-- Social icons -->
+        <div class="social-icons">
+          <!-- Instagram icon -->
+          <a
+            id="insta"
+            href="https://www.instagram.com/odrinl/"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i> </a
+          ><!-- .insta -->
+          <!-- Facebook icon-->
+          <a
+            id="facebook"
+            href="https://www.facebook.com/odrinl"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f"></i> </a
+          ><!-- .facebook -->
+          <!-- Linkedin icon -->
+          <a
+            id="linkedin"
+            href="https://www.linkedin.com/in/odrinl/"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in"></i> </a
+          ><!-- .linkedin -->
+          <!-- Github icon -->
+          <a id="github" href="https://github.com/odrinl" target="_blank">
+            <i class="fab fa-github"></i> </a
+          ><!-- .github -->
         </div>
-        <!-- Text of second article -->
-        <div class="item text">
-          <div>
-            <p>Medieval hatha yoga texts touted the dual benefits of spiritual and physical gains from asanas. In recent years, numerous scientific studies have also shown the therapeutic effects of yoga asanas on various health conditions, such as chronic pain, hypertension, and depression, while enhancing cardiovascular health, respiratory function, and overall quality of life. Regular practice of asanas can help increase flexibility, strength, and balance, as well as circulation, digestion, and immune function.</p>
+        <!-- .social-icons -->
 
-            <p>Asanas can also be modified to suit different ages, abilities, and physical limitations, making it an accessible form of exercise for people of all backgrounds and fitness levels.</p>
+        <!-- NAVIGATION -->
+        <nav id="navigation" class="container">
+          <!-- Navigation section header, visible only for screen readers -->
+          <h4 class="sr-only">NAVIGATION</h4>
+          <!-- List of navigation links -->
+          <ul>
+            <!-- Class "active" at first is assigned to the home link and then dynamically reassigned to the current link when clicking or scrolling -->
+            <li><a class="active" href="#home">HOME</a></li>
+            <li><a href="#about-asanas">ABOUT ASANAS</a></li>
+            <li><a href="#basic-asanas">12 BASIC ASANAS</a></li>
+            <li><a href="#video">VIDEO</a></li>
+            <li><a href="#footer">SUBSCRIBE</a></li>
+            <!-- Hamburger button. Visible only for small screens -->
+            <li>
+              <a id="icon">
+                <i class="fa fa-bars"></i>
+              </a>
+            </li>
+            <!-- #icon -->
+          </ul>
+        </nav>
+        <!-- #navigation.container -->
+      </div>
+      <!-- #topbar.container -->
+    </header>
 
-            <figure>
-              <img class="for-lightbox" src="https://github.com/gaechkahub/images/raw/main/yoga_picture.png" alt="Yoga asanas">
-              <figcaption class="lb-caption">Yoga asanas</figcaption>
-            </figure>
+    <main>
+      <a name="home" class="anchored"></a>
 
-            <p>Each pose is done in sync with the breath, like the <span class="hint" data-tooltip="deep breathing through the nose, while slightly contracting the back of the throat, creating a hissing sound">Ujjayi breath</span>, making them more than just physical exercises. By incorporating breathing techniques and focus, asanas could serve as a gateway to deeper states of consciousness. Through asana practice, we learn to quiet the mind and cultivate a sense of inner peace. This inner peace can lead to a greater awareness of our true nature and the interconnectedness of all things.</p>
-
-            <p>So, strike a pose, and let the good times roll!</p>
+      <!-- HOME PAGE -->
+      <div id="homepage" class="container">
+        <div class="container homepage-column">
+          <div class="title">
+            <h1>
+              <p>YOGA</p>
+              <p>ASANAS</p>
+            </h1>
           </div>
-        </div><!-- .item.text -->
-      </article><!-- .container.about -->
-    </div><!-- #id-about-asanas.container -->
-  </section><!-- .class-about-asanas.container.pink-->
+          <!-- .title -->
+          <!-- Header only for screen readers to increase website accessibility -->
+          <h2 class="sr-only">HOME PAGE</h2>
+          <!-- Section that has quote from Wikipedia -->
+          <figure>
+            <blockquote cite="https://en.wikipedia.org/wiki/Asana">
+              <p>
+                <strong>An asana is a body posture</strong>, used in both
+                medieval <em>hatha</em> yoga and modern yoga. The term is
+                derived from the Sanskrit word for <em>'seat'</em>.
+              </p>
+            </blockquote>
+            <figcaption>
+              <cite
+                ><a href="https://en.wikipedia.org/wiki/Asana"
+                  >(c) Wikipedia</a
+                ></cite
+              >
+            </figcaption>
+          </figure>
+        </div>
+        <!-- .column -->
 
-  <!-- Section with 12 basic asanas -->
-  <section id="id-basic-asanas" class="container"><a name="basic-asanas" class="anchored"></a>
-    <!-- Header of section with 12 basic asanas -->
-    <h2>12 BASIC ASANAS</h2>
-    <!-- Next container is a grid container. In the beginning I wanted to use grid layout for the whole site but then I decided to use different types of layout techniques to show that I know how to use both -->
-    <div class="grid-container class-basic-asanas">
-      <!-- 1st asana -->
-      <div class="asana">
-        <h3>1. Headstand (Sirsasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/handstand.png" alt="Headstand">
-        <p>Headstand, or Sirsasana in Sanskrit, is an advanced yoga pose that involves balancing the body on the head and forearms. To come into the pose, start in a kneeling position and place your forearms on the ground, interlacing your fingers. Place the crown of your head on the ground between your palms, and slowly straighten your legs, lifting them up towards the ceiling. Engage your core muscles to keep your body in a straight line, and breathe deeply. Headstand is often considered the "king" of all yoga poses, and it requires strength, balance, and concentration.</p>
-      </div><!-- .asana -->
-      <!-- 2nd asana -->
-      <div class="asana">
-        <h3>2. Shoulderstand (Sarvangasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Shoulderstand.png" alt="Shoulderstand">
-        <p>An inverted yoga pose that involves lifting your entire body up with your shoulders as the base of support. To come into the pose, start by lying on your back with your arms at your sides. Lift your legs up towards the ceiling, then place your hands on your lower back for support as you lift your hips off the ground. Bring your legs up and over your head, keeping your hands on your back for support, until your toes touch the ground behind your head. Straighten your legs and engage your core muscles to hold the pose, and breathe deeply. Shoulderstand is often practiced as part of a larger sequence of yoga poses.</p>
-      </div><!-- .asana -->
+        <!-- Header image of the website -->
+        <img
+          id="main-img"
+          src="https://raw.githubusercontent.com/odrinl/images/main/yoga.jpg"
+          alt="Asana icon picture"
+        />
+      </div>
+      <!-- .container -->
 
-      <!-- 3rd asana -->
-      <div class="asana">
-        <h3>3. Cat-Cow Stretch (Marjaryasana-Bitilasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Cat-Cow_Stretch.png" alt="Cat-Cow Stretch">
-        <p>A gentle yoga pose that involves moving the spine through two opposing positions. To come into the pose, start on your hands and knees with your wrists directly under your shoulders and your knees under your hips. Inhale as you arch your spine, lifting your head and tailbone towards the ceiling and allowing your belly to sink towards the ground - this is the cow pose (Bitilasana). Exhale as you round your spine, tucking your chin to your chest and bringing your tailbone towards your knees - this is the cat pose (Marjaryasana). Move slowly and smoothly between these two poses, coordinating each movement with your breath. Cat-Cow Stretch is often used as a warm-up or a gentle movement to help relieve tension in the spine, improve flexibility, and increase mindfulness.</p>
-      </div><!-- .asana -->
+      <!-- Section with articles about yoga asanas -->
+      <section class="class-about-asanas container pink">
+        <a name="about-asanas" class="anchored"></a>
+        <!-- Header of about asanas section -->
+        <h2>ABOUT ASANAS</h2>
+        <div id="id-about-asanas" class="container">
+          <!-- Article about history of asanas -->
+          <article class="container about">
+            <div class="item theme">
+              <!-- Header of first article -->
+              <h3>The history of asanas</h3>
+            </div>
+            <!-- .item.theme -->
+            <!-- Text of first article -->
+            <div class="item text">
+              <div>
+                <p>
+                  The distinction between <em>Hatha yoga</em> and
+                  <em>asana</em> is that <strong>asana</strong> specifically
+                  refers to the physical postures practiced in yoga, while
+                  <strong>Hatha yoga</strong> is a branch of yoga that that
+                  incorporates asanas among its many practices. The practice of
+                  asanas is believed to have originated in ancient India and can
+                  be traced back to the
+                  <span
+                    class="hint"
+                    data-tooltip="an ancient Indian collection of Vedic Sanskrit hymns. It is one of the four sacred canonical Hindu texts known as the Vedas."
+                    >Rigveda</span
+                  >, an ancient Hindu scripture dating back to around 1500 BCE.
+                </p>
 
-      <!-- 4th asana -->
-      <div class="asana">
-        <h3>4. Plough (Halasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Plough.png" alt="Plough">
-        <p>An inverted yoga pose that involves folding the body in half and bringing the feet over the head. To come into the pose, start by lying on your back with your arms at your sides. Lift your legs up towards the ceiling, then slowly lower them over your head until your toes touch the ground behind you. Keep your hands on your lower back for support, and breathe deeply as you hold the pose. Plough pose is a challenging posture that requires flexibility in the back, hamstrings, and shoulders, as well as strength in the core and legs. </p>
-      </div><!-- .asana -->
+                <p>
+                  <span
+                    class="hint"
+                    data-tooltip="also called Gonardiya or Gonikaputra, a Hindu author, mystic and philosopher"
+                    >Patanjali</span
+                  >
+                  in his
+                  <span
+                    class="hint"
+                    data-tooltip="a collection of Sanskrit sutras (aphorisms) on the theory and practice of yoga"
+                    >Yoga Sutras</span
+                  >, written around 400 CE, describes asana practice as the
+                  third of the eight limbs (Sanskrit: अष्टाङ्ग, aṣṭāṅga, from
+                  अष्ट् aṣṭ, eight, and अङ्ग aṅga, limb) of classical, or raja
+                  yoga. While the Yoga Sutras do not mention any asanas by name,
+                  they provide guidelines for the physical practice of asanas,
+                  emphasizing their role in purifying the body and preparing it
+                  for meditation.
+                </p>
 
-      <!-- 5th asana -->
-      <div class="asana">
-        <h3>5. Downward Facing Dog (Adho Mukha Shwanasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Downward_Facing_Dog.png" alt="Downward Facing Dog">
-        <p>A foundational yoga pose that involves stretching the entire body, especially the hamstrings, calves, and spine. To come into the pose, start on your hands and knees with your wrists directly under your shoulders and your knees under your hips. Spread your fingers wide and press into your hands as you lift your hips up and back, straightening your arms and legs and forming an inverted "V" shape with your body. Keep your head and neck relaxed, and gaze towards your feet or your navel. Downward Facing Dog is often used as a resting pose or a transitional pose between other yoga postures. </p>
-      </div><!-- .asana -->
+                <figure>
+                  <img
+                    class="for-lightbox"
+                    src="https://github.com/odrinl/images/raw/main/patanjali_text.jpg"
+                    alt="A page from Patanjali's Yoga Sutras"
+                  />
+                  <figcaption class="lb-caption">
+                    A page from Patanjali's Yoga Sutras and Bhasya commentary
+                    (c. 2nd to 4th century CE), which placed asana as one of the
+                    eight limbs of classical yoga
+                  </figcaption>
+                </figure>
 
-      <!-- 6th asana -->
-      <div class="asana">
-        <h3>6. Sitting Forward Bend (Paschimottanasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Sitting_Forward_Bend.png" alt="Sitting Forward Bend">
-        <p>A seated yoga pose that involves folding the body forward over the legs, stretching the entire back of the body from the heels to the crown of the head. To come into the pose, sit on the floor with your legs extended straight out in front of you. Inhale to lengthen your spine, then exhale to fold forward from the hips, reaching your hands towards your feet or ankles. Keep your knees straight and your spine long, and breathe deeply as you hold the pose. Sitting Forward Bend is a calming posture that can help relieve stress and anxiety, as well as improve digestion and stimulate the internal organs.</p>
-      </div><!-- .asana -->
+                <p>
+                  The
+                  <span
+                    class="hint"
+                    data-tooltip="an early text on Hatha yoga, attributed to the sage Goraksha"
+                    >Goraksha Shataka</span
+                  >, written in the 13th century, and the
+                  <span
+                    class="hint"
+                    data-tooltip="Sanskrit manual on hatha yoga, written by Svatmarama, Indian yogic sage"
+                    >Hatha Yoga Pradipika</span
+                  >
+                  (Light on Hatha Yoga), written in the 15th century, identify
+                  84 asanas. The
+                  <span
+                    class="hint"
+                    data-tooltip="late medieval hatha yoga text, originally written by Srinivasa Bhatta yogi"
+                    >Hatha Ratnavali</span
+                  >, written in the 17th century, provides a different list of
+                  84 asanas, describing some of them in greater detail. These
+                  ancient texts provide valuable insights into the history and
+                  evolution of asanas in yoga.
+                </p>
+                <div class="two-column">
+                  <figure>
+                    <img
+                      class="for-lightbox"
+                      src="https://github.com/odrinl/images/raw/main/Sannyasi_in_yoga_meditation_on_the_Ganges%2C_Rishikesh.jpg"
+                      alt="Sanyassin meditating in Padmasana"
+                    />
+                    <figcaption class="lb-caption">
+                      Sanyassin meditating in Padmasana beside the River Ganges
+                      at Rishikesh
+                    </figcaption>
+                  </figure>
 
-      <!-- 7th asana -->
-      <div class="asana">
-        <h3>7. Cobra (Bhujangasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Cobra.png" alt="Cobra">
-        <p>A backbend yoga pose that strengthens the spine and opens the chest, shoulders, and abdomen. To come into the pose, start by lying on your stomach with your hands placed on the ground under your shoulders, fingers spread wide. Inhale as you press into your hands, lifting your chest and upper body off the ground, keeping your elbows close to your sides. Look up towards the ceiling or sky, keeping your shoulders relaxed and your gaze soft. Cobra pose is often used as a warm-up for deeper backbends or as a gentle stretch for the back and spine. </p>
-      </div><!-- .asana -->
+                  <p>
+                    During the 20th century,
+                    <span
+                      class="hint"
+                      data-tooltip="an instance of territorial nationalism, included all the people of India, was spearheaded by Mahatma Gandhi and Jawaharlal Nehru"
+                      >Indian nationalism</span
+                    >
+                    responded to
+                    <span
+                      class="hint"
+                      data-tooltip="From 1858 onwards, the British government directly ruled India, it became known as the British Raj"
+                      >colonialism</span
+                    >
+                    by promoting physical culture. This movement led to the
+                    emergence of pioneers such as
+                    <span
+                      class="hint"
+                      data-tooltip="an Indian yoga guru and founder of the Yoga Institute in Mumbai"
+                      >Yogendra</span
+                    >,
+                    <span
+                      class="hint"
+                      data-tooltip="an Indian yoga teacher and researcher, founded the Kaivalyadhama Yoga Institute"
+                      >Kuvalayananda</span
+                    >, and
+                    <span
+                      class="hint"
+                      data-tooltip='(1888-1989) was a renowned Indian yoga teacher often referred to as the "father of modern yoga"'
+                      >Krishnamacharya</span
+                    >, who introduced a new system of asanas that combined
+                    exercise and traditional Hatha yoga. Krishnamacharya's
+                    influential pupils including
+                    <span
+                      class="hint"
+                      data-tooltip="an Indian yoga teacher, founded the Ashtanga Yoga Research Institute in Mysore"
+                      >Pattabhi Jois</span
+                    >, the founder of
+                    <span
+                      class="hint"
+                      data-tooltip="unique style of yoga that emphasizes breath-synchronized movement and a set series of postures"
+                      >Ashtanga vinyasa yoga</span
+                    >, and
+                    <span
+                      class="hint"
+                      data-tooltip="a renowned yoga teacher and popularizer of yoga"
+                      >B.K.S. Iyengar</span
+                    >, the founder of
+                    <span
+                      class="hint"
+                      data-tooltip="emphasizes precise alignment and the use of props, such as blocks and straps, to help students"
+                      >Iyengar yoga</span
+                    >, developed hundreds of additional asanas and revived the
+                    popularity of yoga, introducing it to the Western world.
+                  </p>
+                </div>
+                <!-- .two-column -->
 
-      <!-- 8th asana -->
-      <div class="asana">
-        <h3>8. Locust (Salabhasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Locust.png" alt="Locust">
-        <p>A back-strengthening yoga pose that targets the muscles of the lower back, glutes, and hamstrings. To come into the pose, start by lying on your stomach with your arms resting alongside your body, palms facing down. Inhale as you lift your legs, chest, and arms off the ground, keeping your gaze forward and your shoulders relaxed. Press your pelvis and legs down into the ground, lengthening through your spine and reaching your fingers towards your toes. Hold the pose for several breaths before lowering back down to the ground.</p>
-      </div><!-- .asana -->
+                <p>
+                  Iyengar's 1966 book,
+                  <span
+                    class="hint"
+                    data-tooltip="This book has been translated into 18 languages and has sold over 3 million copies"
+                    >Light on Yoga</span
+                  >
+                  introduced approximately 200 asanas, accompanied by detailed
+                  instructions and photographs. This book has since become a
+                  classic reference for practitioners and teachers of yoga
+                  worldwide.
+                  <span
+                    class="hint"
+                    data-tooltip="founder of the Dharma Yoga Center in New York City"
+                    >Dharma Mittra</span
+                  >, another prominent yoga teacher, has also illustrated
+                  hundreds more asanas in his book, Asanas: 608 Yoga Poses.
+                </p>
 
-      <!-- 9th asana -->
-      <div class="asana">
-        <h3>9. Bow (Dhanurasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Bow.png" alt="Bow">
-        <p>A back-bending yoga pose that strengthens the back muscles and opens the chest, shoulders, and hips. To come into the pose, start by lying on your stomach with your chin on the ground and your arms alongside your body, palms facing up. Inhale as you bend your knees and reach back to grasp your ankles or shins with your hands. Exhale as you lift your chest and thighs off the ground, pressing your feet and shins back into your hands. Keep your gaze forward and your shoulders relaxed as you hold the pose for several breaths before releasing back down to the ground. </p>
-      </div><!-- .asana -->
+                <figure>
+                  <img
+                    class="for-lightbox"
+                    src="https://github.com/odrinl/images/raw/main/Growth_in_Number_of_Asanas.png"
+                    alt="Growth in Number of Asanas"
+                  />
+                  <figcaption class="lb-caption">
+                    GS=Goraksha Sataka; ShS=Shiva Samhita; HYP=Hatha Yoga
+                    Pradipika; HR=Hatha Ratnavali; GhS=Gheranda Samhita; JP=Yoga
+                    Pradipika; YS=Yoga Sopana; LoY=Light on Yoga; DM=Dharma
+                    Mittra
+                  </figcaption>
+                </figure>
 
-      <!-- 10th asana -->
-      <div class="asana">
-        <h3>10. Bridge Pose (Setu Bandha Sarvangasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Bridge_Pose.png" alt="Half Spinal Twist">
-        <p>A gentle back-bending yoga pose that strengthens the back muscles, opens the chest, and stretches the hips and thighs. To come into the pose, start by lying on your back with your knees bent and feet flat on the ground. Inhale as you press your feet and arms down into the ground and lift your hips up towards the ceiling, keeping your knees in line with your ankles and your arms and shoulders relaxed. Clasp your hands together underneath your body and roll your shoulders underneath you to lift your chest higher. Hold the pose for several breaths before releasing back down to the ground. </p>
-      </div><!-- .asana -->
+                <p>
+                  Asanas have been depicted in Indian religious art for
+                  centuries, often portraying figures of
+                  <span
+                    class="hint"
+                    data-tooltip="a spiritual leader and teacher who founded Buddhism"
+                    >Buddha</span
+                  >,
+                  <span
+                    class="hint"
+                    data-tooltip="There are 24 recognized tirthankaras - revered figures in Jainism"
+                    >Jain tirthankaras</span
+                  >, and
+                  <span
+                    class="hint"
+                    data-tooltip="a major deity in Hinduism and one of the Trimurti, the three main gods of Hinduism"
+                    >Shiva</span
+                  >
+                  in
+                  <span
+                    class="hint"
+                    data-tooltip=" a cross-legged sitting posture, where the feet are placed on the opposite thighs, with the soles facing upward"
+                    >lotus position</span
+                  >
+                  or other meditation seats.
+                </p>
 
-      <!-- 11th asana -->
-      <div class="asana">
-        <h3>11. Standing Forward Bend (Pada Hastasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Standing_Forward_Bend.png" alt="Standing Forward Bend">
-        <p>A standing yoga pose that stretches the hamstrings, calves, and spine, while also calming the mind and relieving stress. To come into the pose, start by standing with your feet hip-width apart and your hands resting on your hips. Inhale as you lengthen your spine and exhale as you fold forward from your hips, bringing your hands to the ground or to the backs of your legs. If you have tight hamstrings, you can bend your knees slightly to ease into the stretch. Let your head hang heavy and relax your neck, and take several deep breaths in the pose before coming back up to standing. </p>
-      </div><!-- .asana -->
+                <p>
+                  The evolution of asanas in yoga has been ongoing for thousands
+                  of years. Today, with the growth of popularity of yoga
+                  worldwide, asanas continue to be an integral part of modern
+                  yoga practice and are widely recognized for their numerous
+                  health benefits.
+                </p>
+              </div>
+            </div>
+            <!-- .item.text -->
+          </article>
+          <!-- .container.about -->
 
-      <!-- 12th asana -->
-      <div class="asana">
-        <h3>12. Triangle (Trikonasana)</h3>
-        <img src="https://raw.githubusercontent.com/gaechkahub/images/main/Triangle.png" alt="Triangle">
-        <p>A standing yoga pose that stretches the hips, hamstrings, and spine, while also improving balance and stability. To come into the pose, start by standing with your feet about three to four feet apart and your arms out to the sides, palms facing down. Turn your left foot slightly inwards and your right foot out to the side, making sure your right heel is aligned with the arch of your left foot. Inhale as you reach your right arm up towards the ceiling, and exhale as you reach your right hand down towards your right ankle, shin, or a block, while at the same time extending your left arm up towards the ceiling. Keep your gaze directed towards your left hand and hold the pose for several breaths before coming back up to standing and repeating on the other side. </p>
-      </div><!-- .asana -->
-    </div><!-- .basic -->
-  </section><!-- #id-basic-asanas.container -->
+          <!-- Article about benefits of asanas -->
+          <article class="container about">
+            <div class="item theme">
+              <!-- Header of second article -->
+              <h3>Benefits of asanas</h3>
+            </div>
+            <!-- Text of second article -->
+            <div class="item text">
+              <div>
+                <p>
+                  Medieval hatha yoga texts touted the dual benefits of
+                  spiritual and physical gains from asanas. In recent years,
+                  numerous scientific studies have also shown the therapeutic
+                  effects of yoga asanas on various health conditions, such as
+                  chronic pain, hypertension, and depression, while enhancing
+                  cardiovascular health, respiratory function, and overall
+                  quality of life. Regular practice of asanas can help increase
+                  flexibility, strength, and balance, as well as circulation,
+                  digestion, and immune function.
+                </p>
 
-  <!-- 
-  This section contains a video that automatically starts playing when the user scrolls over 50% of it
-  -->
-  <section class="youtube-video container"><a name="video" class="anchored"></a>
-    <!-- Header of the section with video -->
-    <h2>VIDEO</h2>
-    <h3>What yoga does to your body and brain</h3>
-    <!-- Video player -->
-    <div class="video">
-      <div id="player"></div>
-    </div>
-  </section><!-- .youtube-video.container -->
+                <p>
+                  Asanas can also be modified to suit different ages, abilities,
+                  and physical limitations, making it an accessible form of
+                  exercise for people of all backgrounds and fitness levels.
+                </p>
 
-  <!-- LIGHTBOX -->
-  <!-- Code for the modal window (lightbox). It shows up on top of a web page, making all other page content inaccessible. Returning to the main content requires to close the modal with close button in top right corner -->
-  <!-- The container for the lightbox -->
-  <div id="lightbox">
-    <!-- The close button -->
-    <span id="lightbox-close">&times;</span>
-    <!-- Next/previous controls -->
-    <span id="lightbox-arrow-left">&lt;</span>
-    <span id="lightbox-arrow-right">&gt;</span>
-    <!-- The main image that is displayed in the lightbox -->
-    <img id="lightbox-img">
-    <!-- The caption for the main image -->
-    <div id="lb-caption">
-    </div>
-    <!-- The thumbnail images -->
-    <img id="img-1" src="#" alt="" class="thumbnails">
-    <!-- The caption for the first thumbnail image -->
-    <div id="tb-1" class="tb-caption">
-    </div>
-    <img id="img-2" src="#" alt="" class="thumbnails">
-    <!-- The caption for the second thumbnail image -->
-    <div id="tb-2" class="tb-caption">
-    </div>
-    <img id="img-3" src="#" alt="" class="thumbnails">
-    <!-- The caption for the third thumbnail image -->
-    <div id="tb-3" class="tb-caption">
-    </div>
-  </div><!-- #lightbox -->
-  <!-- End of the container for the lightbox -->
-</main>
+                <figure>
+                  <img
+                    class="for-lightbox"
+                    src="https://github.com/odrinl/images/raw/main/yoga_picture.png"
+                    alt="Yoga asanas"
+                  />
+                  <figcaption class="lb-caption">Yoga asanas</figcaption>
+                </figure>
 
-<!-- FOOTER -->
-<!--
-The footer section includes subscription form, yoga icons credit, and author information
--->
-<footer id="main-footer" class="container"><a name="footer" class="anchored"></a>
-  <h2>Subscribe</h2>
-  <!-- Subscription form -->
-  <form id="submit-email">
-    <label>Subscribe to newsletters:</label>
-    <input type="email" name="youremail" placeholder="Your email" required>
-    <input type="submit" name="submit" value="submit">
-  </form>
-  <!-- Yoga icons credit -->
-  <p>Yoga icons created by <a href="https://www.flaticon.com/free-icons/yoga" title="yoga icons">Roundicons - Flaticon</a></p>
-  <!-- Author information -->
-  <p>Copyright &copy; 2023, <a href="https://www.facebook.com/odrinl" target="_blank">Audrey Maslennikova</a></p>
-</footer>
+                <p>
+                  Each pose is done in sync with the breath, like the
+                  <span
+                    class="hint"
+                    data-tooltip="deep breathing through the nose, while slightly contracting the back of the throat, creating a hissing sound"
+                    >Ujjayi breath</span
+                  >, making them more than just physical exercises. By
+                  incorporating breathing techniques and focus, asanas could
+                  serve as a gateway to deeper states of consciousness. Through
+                  asana practice, we learn to quiet the mind and cultivate a
+                  sense of inner peace. This inner peace can lead to a greater
+                  awareness of our true nature and the interconnectedness of all
+                  things.
+                </p>
 
-<!-- Link to my free kit with social icons from website fontawesome.com. -->
-<script src="https://kit.fontawesome.com/db7836da1d.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="script.js"></script>
-   </body>
+                <p>So, strike a pose, and let the good times roll!</p>
+              </div>
+            </div>
+            <!-- .item.text -->
+          </article>
+          <!-- .container.about -->
+        </div>
+        <!-- #id-about-asanas.container -->
+      </section>
+      <!-- .class-about-asanas.container.pink-->
+
+      <!-- Section with 12 basic asanas -->
+      <section id="id-basic-asanas" class="container">
+        <a name="basic-asanas" class="anchored"></a>
+        <!-- Header of section with 12 basic asanas -->
+        <h2>12 BASIC ASANAS</h2>
+        <!-- Next container is a grid container. In the beginning I wanted to use grid layout for the whole site but then I decided to use different types of layout techniques to show that I know how to use both -->
+        <div class="grid-container class-basic-asanas">
+          <!-- 1st asana -->
+          <div class="asana">
+            <h3>1. Headstand (Sirsasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/handstand.png"
+              alt="Headstand"
+            />
+            <p>
+              Headstand, or Sirsasana in Sanskrit, is an advanced yoga pose that
+              involves balancing the body on the head and forearms. To come into
+              the pose, start in a kneeling position and place your forearms on
+              the ground, interlacing your fingers. Place the crown of your head
+              on the ground between your palms, and slowly straighten your legs,
+              lifting them up towards the ceiling. Engage your core muscles to
+              keep your body in a straight line, and breathe deeply. Headstand
+              is often considered the "king" of all yoga poses, and it requires
+              strength, balance, and concentration.
+            </p>
+          </div>
+          <!-- .asana -->
+          <!-- 2nd asana -->
+          <div class="asana">
+            <h3>2. Shoulderstand (Sarvangasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Shoulderstand.png"
+              alt="Shoulderstand"
+            />
+            <p>
+              An inverted yoga pose that involves lifting your entire body up
+              with your shoulders as the base of support. To come into the pose,
+              start by lying on your back with your arms at your sides. Lift
+              your legs up towards the ceiling, then place your hands on your
+              lower back for support as you lift your hips off the ground. Bring
+              your legs up and over your head, keeping your hands on your back
+              for support, until your toes touch the ground behind your head.
+              Straighten your legs and engage your core muscles to hold the
+              pose, and breathe deeply. Shoulderstand is often practiced as part
+              of a larger sequence of yoga poses.
+            </p>
+          </div>
+          <!-- .asana -->
+
+          <!-- 3rd asana -->
+          <div class="asana">
+            <h3>3. Cat-Cow Stretch (Marjaryasana-Bitilasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Cat-Cow_Stretch.png"
+              alt="Cat-Cow Stretch"
+            />
+            <p>
+              A gentle yoga pose that involves moving the spine through two
+              opposing positions. To come into the pose, start on your hands and
+              knees with your wrists directly under your shoulders and your
+              knees under your hips. Inhale as you arch your spine, lifting your
+              head and tailbone towards the ceiling and allowing your belly to
+              sink towards the ground - this is the cow pose (Bitilasana).
+              Exhale as you round your spine, tucking your chin to your chest
+              and bringing your tailbone towards your knees - this is the cat
+              pose (Marjaryasana). Move slowly and smoothly between these two
+              poses, coordinating each movement with your breath. Cat-Cow
+              Stretch is often used as a warm-up or a gentle movement to help
+              relieve tension in the spine, improve flexibility, and increase
+              mindfulness.
+            </p>
+          </div>
+          <!-- .asana -->
+
+          <!-- 4th asana -->
+          <div class="asana">
+            <h3>4. Plough (Halasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Plough.png"
+              alt="Plough"
+            />
+            <p>
+              An inverted yoga pose that involves folding the body in half and
+              bringing the feet over the head. To come into the pose, start by
+              lying on your back with your arms at your sides. Lift your legs up
+              towards the ceiling, then slowly lower them over your head until
+              your toes touch the ground behind you. Keep your hands on your
+              lower back for support, and breathe deeply as you hold the pose.
+              Plough pose is a challenging posture that requires flexibility in
+              the back, hamstrings, and shoulders, as well as strength in the
+              core and legs.
+            </p>
+          </div>
+          <!-- .asana -->
+
+          <!-- 5th asana -->
+          <div class="asana">
+            <h3>5. Downward Facing Dog (Adho Mukha Shwanasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Downward_Facing_Dog.png"
+              alt="Downward Facing Dog"
+            />
+            <p>
+              A foundational yoga pose that involves stretching the entire body,
+              especially the hamstrings, calves, and spine. To come into the
+              pose, start on your hands and knees with your wrists directly
+              under your shoulders and your knees under your hips. Spread your
+              fingers wide and press into your hands as you lift your hips up
+              and back, straightening your arms and legs and forming an inverted
+              "V" shape with your body. Keep your head and neck relaxed, and
+              gaze towards your feet or your navel. Downward Facing Dog is often
+              used as a resting pose or a transitional pose between other yoga
+              postures.
+            </p>
+          </div>
+          <!-- .asana -->
+
+          <!-- 6th asana -->
+          <div class="asana">
+            <h3>6. Sitting Forward Bend (Paschimottanasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Sitting_Forward_Bend.png"
+              alt="Sitting Forward Bend"
+            />
+            <p>
+              A seated yoga pose that involves folding the body forward over the
+              legs, stretching the entire back of the body from the heels to the
+              crown of the head. To come into the pose, sit on the floor with
+              your legs extended straight out in front of you. Inhale to
+              lengthen your spine, then exhale to fold forward from the hips,
+              reaching your hands towards your feet or ankles. Keep your knees
+              straight and your spine long, and breathe deeply as you hold the
+              pose. Sitting Forward Bend is a calming posture that can help
+              relieve stress and anxiety, as well as improve digestion and
+              stimulate the internal organs.
+            </p>
+          </div>
+          <!-- .asana -->
+
+          <!-- 7th asana -->
+          <div class="asana">
+            <h3>7. Cobra (Bhujangasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Cobra.png"
+              alt="Cobra"
+            />
+            <p>
+              A backbend yoga pose that strengthens the spine and opens the
+              chest, shoulders, and abdomen. To come into the pose, start by
+              lying on your stomach with your hands placed on the ground under
+              your shoulders, fingers spread wide. Inhale as you press into your
+              hands, lifting your chest and upper body off the ground, keeping
+              your elbows close to your sides. Look up towards the ceiling or
+              sky, keeping your shoulders relaxed and your gaze soft. Cobra pose
+              is often used as a warm-up for deeper backbends or as a gentle
+              stretch for the back and spine.
+            </p>
+          </div>
+          <!-- .asana -->
+
+          <!-- 8th asana -->
+          <div class="asana">
+            <h3>8. Locust (Salabhasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Locust.png"
+              alt="Locust"
+            />
+            <p>
+              A back-strengthening yoga pose that targets the muscles of the
+              lower back, glutes, and hamstrings. To come into the pose, start
+              by lying on your stomach with your arms resting alongside your
+              body, palms facing down. Inhale as you lift your legs, chest, and
+              arms off the ground, keeping your gaze forward and your shoulders
+              relaxed. Press your pelvis and legs down into the ground,
+              lengthening through your spine and reaching your fingers towards
+              your toes. Hold the pose for several breaths before lowering back
+              down to the ground.
+            </p>
+          </div>
+          <!-- .asana -->
+
+          <!-- 9th asana -->
+          <div class="asana">
+            <h3>9. Bow (Dhanurasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Bow.png"
+              alt="Bow"
+            />
+            <p>
+              A back-bending yoga pose that strengthens the back muscles and
+              opens the chest, shoulders, and hips. To come into the pose, start
+              by lying on your stomach with your chin on the ground and your
+              arms alongside your body, palms facing up. Inhale as you bend your
+              knees and reach back to grasp your ankles or shins with your
+              hands. Exhale as you lift your chest and thighs off the ground,
+              pressing your feet and shins back into your hands. Keep your gaze
+              forward and your shoulders relaxed as you hold the pose for
+              several breaths before releasing back down to the ground.
+            </p>
+          </div>
+          <!-- .asana -->
+
+          <!-- 10th asana -->
+          <div class="asana">
+            <h3>10. Bridge Pose (Setu Bandha Sarvangasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Bridge_Pose.png"
+              alt="Half Spinal Twist"
+            />
+            <p>
+              A gentle back-bending yoga pose that strengthens the back muscles,
+              opens the chest, and stretches the hips and thighs. To come into
+              the pose, start by lying on your back with your knees bent and
+              feet flat on the ground. Inhale as you press your feet and arms
+              down into the ground and lift your hips up towards the ceiling,
+              keeping your knees in line with your ankles and your arms and
+              shoulders relaxed. Clasp your hands together underneath your body
+              and roll your shoulders underneath you to lift your chest higher.
+              Hold the pose for several breaths before releasing back down to
+              the ground.
+            </p>
+          </div>
+          <!-- .asana -->
+
+          <!-- 11th asana -->
+          <div class="asana">
+            <h3>11. Standing Forward Bend (Pada Hastasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Standing_Forward_Bend.png"
+              alt="Standing Forward Bend"
+            />
+            <p>
+              A standing yoga pose that stretches the hamstrings, calves, and
+              spine, while also calming the mind and relieving stress. To come
+              into the pose, start by standing with your feet hip-width apart
+              and your hands resting on your hips. Inhale as you lengthen your
+              spine and exhale as you fold forward from your hips, bringing your
+              hands to the ground or to the backs of your legs. If you have
+              tight hamstrings, you can bend your knees slightly to ease into
+              the stretch. Let your head hang heavy and relax your neck, and
+              take several deep breaths in the pose before coming back up to
+              standing.
+            </p>
+          </div>
+          <!-- .asana -->
+
+          <!-- 12th asana -->
+          <div class="asana">
+            <h3>12. Triangle (Trikonasana)</h3>
+            <img
+              src="https://raw.githubusercontent.com/odrinl/images/main/Triangle.png"
+              alt="Triangle"
+            />
+            <p>
+              A standing yoga pose that stretches the hips, hamstrings, and
+              spine, while also improving balance and stability. To come into
+              the pose, start by standing with your feet about three to four
+              feet apart and your arms out to the sides, palms facing down. Turn
+              your left foot slightly inwards and your right foot out to the
+              side, making sure your right heel is aligned with the arch of your
+              left foot. Inhale as you reach your right arm up towards the
+              ceiling, and exhale as you reach your right hand down towards your
+              right ankle, shin, or a block, while at the same time extending
+              your left arm up towards the ceiling. Keep your gaze directed
+              towards your left hand and hold the pose for several breaths
+              before coming back up to standing and repeating on the other side.
+            </p>
+          </div>
+          <!-- .asana -->
+        </div>
+        <!-- .basic -->
+      </section>
+      <!-- #id-basic-asanas.container -->
+
+      <!-- 
+      This section contains a video that automatically starts playing when the user scrolls over 50% of it
+      -->
+      <section class="youtube-video container">
+        <a name="video" class="anchored"></a>
+        <!-- Header of the section with video -->
+        <h2>VIDEO</h2>
+        <h3>What yoga does to your body and brain</h3>
+        <!-- Video player -->
+        <div class="video">
+          <div id="player"></div>
+        </div>
+      </section>
+      <!-- .youtube-video.container -->
+
+      <!-- LIGHTBOX -->
+      <!-- Code for the modal window (lightbox). It shows up on top of a web page, making all other page content inaccessible. Returning to the main content requires to close the modal with close button in top right corner -->
+      <!-- The container for the lightbox -->
+      <div id="lightbox">
+        <!-- The close button -->
+        <span id="lightbox-close">&times;</span>
+        <!-- Next/previous controls -->
+        <span id="lightbox-arrow-left">&lt;</span>
+        <span id="lightbox-arrow-right">&gt;</span>
+        <!-- The main image that is displayed in the lightbox -->
+        <img id="lightbox-img" />
+        <!-- The caption for the main image -->
+        <div id="lb-caption"></div>
+        <!-- The thumbnail images -->
+        <img id="img-1" src="#" alt="" class="thumbnails" />
+        <!-- The caption for the first thumbnail image -->
+        <div id="tb-1" class="tb-caption"></div>
+        <img id="img-2" src="#" alt="" class="thumbnails" />
+        <!-- The caption for the second thumbnail image -->
+        <div id="tb-2" class="tb-caption"></div>
+        <img id="img-3" src="#" alt="" class="thumbnails" />
+        <!-- The caption for the third thumbnail image -->
+        <div id="tb-3" class="tb-caption"></div>
+      </div>
+      <!-- #lightbox -->
+      <!-- End of the container for the lightbox -->
+    </main>
+
+    <!-- FOOTER -->
+    <!--
+    The footer section includes subscription form, yoga icons credit, and author information
+    -->
+    <footer id="main-footer" class="container">
+      <a name="footer" class="anchored"></a>
+      <h2>Subscribe</h2>
+      <!-- Subscription form -->
+      <form id="submit-email">
+        <label>Subscribe to newsletters:</label>
+        <input
+          type="email"
+          name="youremail"
+          placeholder="Your email"
+          required
+        />
+        <input type="submit" name="submit" value="submit" />
+      </form>
+      <!-- Yoga icons credit -->
+      <p>
+        Yoga icons created by
+        <a href="https://www.flaticon.com/free-icons/yoga" title="yoga icons"
+          >Roundicons - Flaticon</a
+        >
+      </p>
+      <!-- Author information -->
+      <p>
+        Copyright &copy; 2023,
+        <a href="https://www.facebook.com/odrinl" target="_blank"
+          >Audrey Maslennikova</a
+        >
+      </p>
+    </footer>
+
+    <!-- Link to my free kit with social icons from website fontawesome.com. -->
+    <script
+      src="https://kit.fontawesome.com/db7836da1d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

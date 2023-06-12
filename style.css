@@ -94,7 +94,7 @@ a:active {
 
 /* I deliberately used and flex-containers and grid-containers to show that I know how to use both, also I deliberately didn't align all sections on the page - I wanted site to look more unusual */
 
-/* Flex-conteiner for general purposes */
+/* Flex-container for general purposes */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -105,7 +105,7 @@ a:active {
  */
 }
 
-/* Grid-conteiner for general purposes */
+/* Grid-container for general purposes */
 .grid-container {
   display: grid;
   gap: 1rem;
@@ -148,7 +148,7 @@ img {
   min-width: 350px;
   width: 100%;
   top: 0;
-  /* To be shure that it will be placed over any other elements */
+  /* To be sure that it will be placed over any other elements */
   z-index: 100;
   /* To make text in the navbar look different */
   letter-spacing: 0.6px;
@@ -221,7 +221,7 @@ I used social icons from website fontawesome.com. I registered there to get my f
   top: -60px;
 }
 
-/* Color for dinamically added active class of links in navigation menu */
+/* Color for dynamically added active class of links in navigation menu */
 #navigation .active {
   background-color: #0a74aa;
 }
@@ -356,7 +356,7 @@ span.hint {
   cursor: pointer;
 }
 
-/* Style for tooltips which dinamically pop-up when hover or click over span .hint */
+/* Style for tooltips which dynamically pop-up when hover or click over span .hint */
 .hint-tooltip {
   box-sizing: border-box;
   /*   To make tooltips on top of any other texts */
@@ -367,7 +367,7 @@ span.hint {
   font-weight: 400;
   text-align: left;
   line-height: 1.1em;
-  /* Visualise content of custom data-tooltip attribute of hint span */
+  /* Visualize content of custom data-tooltip attribute of hint span */
   content: attr(data-tooltip);
   color: black;
   position: absolute;
@@ -384,7 +384,7 @@ span.hint {
   animation: fade 0.2s ease forwards;
 }
 
-/* starting and ending point of animated transitions for tooptips (copied from Wikipedia) */
+/* starting and ending point of animated transitions for tooltips (copied from Wikipedia) */
 @keyframes fade {
   0% {
     opacity: 0;
