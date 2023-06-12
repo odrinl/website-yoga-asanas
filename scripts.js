@@ -12,6 +12,7 @@ const topbar_res = document.getElementById("topbar");
 
 const homepage_res = document.getElementById("homepage");
 
+if (icon_link) {
 icon_link.addEventListener("click", function () {
   const anchor_res = document.getElementsByClassName("anchored");
   for (const anchor of anchor_res) {
@@ -22,7 +23,7 @@ icon_link.addEventListener("click", function () {
 
   homepage_res.classList.toggle("responsive");
 });
-
+}
 // Make the clicked link in the navigation menu active - change background color and also make it active while scrolling
 
 // Select all navigation links
