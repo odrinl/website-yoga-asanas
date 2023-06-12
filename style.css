@@ -820,7 +820,7 @@ input:focus {
 Later on my smartphone I noticed that my nav links in "hamburger" menu list sometimes "sticks" to active state and I had no idea why, so I had to connect my phone to the laptop and use inspection dev tool for browser on my smartphone. This way I found out that the problem is with the hover rule - it was working not like expected, so I googled the solution and found the next one - media query only for devices that supports hovering. 
 
 Explanation - if the browser supports proper/true/real/non-emulated hovering (e.g. has a mouse-like primary input device), then apply this style when buttons are hovered over.
-After adding this rule evetything started to work as I wanted  
+After adding this rule everything started to work as I wanted  
 */
 @media (hover: hover) {
   #navigation li a:hover {

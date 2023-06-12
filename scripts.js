@@ -207,13 +207,15 @@ function nextImage() {
 const lightbox_arrow_left = document.getElementById("lightbox-arrow-left");
 const lightbox_arrow_right = document.getElementById("lightbox-arrow-right");
 
-lightbox_arrow_left.addEventListener("click", () => {
+if (lightbox_arrow_left) { lightbox_arrow_left.addEventListener("click", () => {
   prevImage();
 });
+}
 
-lightbox_arrow_right.addEventListener("click", () => {
+if (lightbox_arrow_right) {lightbox_arrow_right.addEventListener("click", () => {
   nextImage();
 });
+}
 
 /*
 TOOLTIPS FOR HIGHLIGHTED WORDS IN HISTORY OF ASANAS SECTION
