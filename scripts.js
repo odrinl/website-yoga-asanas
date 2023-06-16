@@ -255,12 +255,19 @@ function videoAutoControl(selector, video, videoTogglePct) {
         });
       });
 
-      // Get close button and add click event listener to remove active class from lightbox
+      // Get close button and add click event listener to remove active class from lightbox (close the modal)
       const close_button = document.getElementById("lightbox-close");
       if (close_button) {
         close_button.addEventListener("click", function () {
+          // Close the modal
           lightbox.classList.remove("lb-active");
         });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+              // Close the modal if the Esc key is pressed:
+              lightbox.classList.remove("lb-active");
+          }
+      });
       }
 
       // Set initial index to 0 for image navigation
